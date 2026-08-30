@@ -74,4 +74,8 @@ with gr.Blocks(theme=gr.themes.Soft(),css=CSS,title='Class IV Mathematics — Ex
     for i,b in enumerate([b0,b1,b2,b3]): b.click(lambda s,idx=i:answer(idx,s),state,ans_out)
     next_out=[state,progress,question,feedback,result,score,b0,b1,b2,b3,next_btn,again]
     next_btn.click(next_q,state,next_out)
-if __name__=='__main__': demo.launch(server_name='0.0.0.0',port=7860)
+if __name__ == "__main__":
+    demo.launch(
+        server_name="0.0.0.0",
+        server_port=7860
+    )
